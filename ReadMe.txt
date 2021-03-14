@@ -1,5 +1,5 @@
 Реализация проекта "Библиотека"
-Технологии: БД(SQL: h2), Spring, Maven, JUnit, Java 8
+Технологии: БД(SQL: h2), Spring, Maven, JUnit, Java 8 (Проверялось на Intelij IDEA 2020.3.2 Ultimate)
 
 
 Запуск:
