@@ -1,0 +1,31 @@
+DROP TABLE IF EXISTS Book_Author;
+DROP TABLE IF EXISTS Book;
+DROP TABLE IF EXISTS Author;
+
+CREATE TABLE Book
+(
+    Id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    Title VARCHAR(255) NOT NULL ,
+    Year INT NOT NULL ,
+    Publishing VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Author
+(
+    Id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL ,
+    Surname VARCHAR(255) NOT NULL ,
+    Day INT NOT NULL,
+    Month INT NOT NULL,
+    Year INT NOT NULL ,
+    Gender VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Book_Author
+(
+    BookId BIGINT,
+    AuthorId BIGINT,
+    PRIMARY KEY (BookId, AuthorId),
+    FOREIGN KEY(BookId) REFERENCES Book(Id),
+    FOREIGN KEY(AuthorId) REFERENCES Author(Id)
+);
